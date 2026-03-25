@@ -16,7 +16,10 @@ export default function FeaturedPropertyCard({ property }: { property: Property 
             {property.tags[0]}
           </div>
         )}
-        <button className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 dark:bg-black/60 backdrop-blur-sm flex items-center justify-center text-nordic-dark hover:bg-mosque hover:text-white transition-all">
+        <button
+          className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 dark:bg-black/60 backdrop-blur-sm flex items-center justify-center text-nordic-dark hover:bg-mosque hover:text-white transition-all"
+          aria-label="Save property"
+        >
           <span className="material-icons text-xl">favorite_border</span>
         </button>
         <div className="absolute bottom-0 inset-x-0 h-1/2 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
