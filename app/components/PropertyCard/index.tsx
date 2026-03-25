@@ -8,7 +8,10 @@ export default function PropertyCard({ property }: { property: Property }) {
     <article className="bg-white dark:bg-white/5 rounded-xl overflow-hidden shadow-card hover:shadow-soft transition-all duration-300 group cursor-pointer h-full flex flex-col">
       <div className="relative aspect-[4/3] overflow-hidden">
         <img alt={property.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={property.image} />
-        <button className="absolute top-3 right-3 p-2 bg-white/90 dark:bg-black/50 rounded-full hover:bg-mosque hover:text-white transition-colors text-nordic-dark">
+        <button
+          className="absolute top-3 right-3 p-2 bg-white/90 dark:bg-black/50 rounded-full hover:bg-mosque hover:text-white transition-colors text-nordic-dark"
+          aria-label="Save property"
+        >
           <span className="material-icons text-lg">favorite_border</span>
         </button>
         {property.tags.length > 0 && (
