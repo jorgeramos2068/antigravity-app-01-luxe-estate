@@ -34,7 +34,7 @@ export default function PropertyCard({ property }: { property: Property }) {
             <span className="material-icons text-sm text-mosque/80">bathtub</span> {property.baths}
           </div>
           <div className="flex items-center gap-1 text-nordic-muted text-xs">
-            <span className="material-icons text-sm text-mosque/80">square_foot</span> {property.area}m²
+            <span className="material-icons text-sm text-mosque/80">square_foot</span> {property.area.toLocaleString()} m²
           </div>
         </div>
       </div>
