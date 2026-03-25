@@ -27,7 +27,9 @@ export default function FeaturedPropertyCard({ property }: { property: Property 
       <div className="p-6 relative">
         <div className="flex justify-between items-start mb-2">
           <div>
-            <h3 className="text-xl font-medium text-nordic-dark dark:text-white group-hover:text-mosque transition-colors">{property.title}</h3>
+            <h3 className="text-xl font-medium text-nordic-dark dark:text-white group-hover:text-mosque transition-colors">
+              {property.title}
+            </h3>
             <p className="text-nordic-muted text-sm flex items-center gap-1 mt-1">
               <span className="material-icons text-sm">place</span> {property.location}
             </p>

@@ -1,0 +1,8 @@
+Dockerfile
+.prettierignore
+.npmrc
+.nvmrc
+*.snap
+.gitignore
+*.png
+*.pem
