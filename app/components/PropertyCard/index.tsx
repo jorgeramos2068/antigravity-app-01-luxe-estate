@@ -7,7 +7,11 @@ export default function PropertyCard({ property }: { property: Property }) {
   return (
     <article className="bg-white dark:bg-white/5 rounded-xl overflow-hidden shadow-card hover:shadow-soft transition-all duration-300 group cursor-pointer h-full flex flex-col">
       <div className="relative aspect-[4/3] overflow-hidden">
-        <img alt={property.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={property.image} />
+        <img
+          alt={property.title}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          src={property.image}
+        />
         <button
           className="absolute top-3 right-3 p-2 bg-white/90 dark:bg-black/50 rounded-full hover:bg-mosque hover:text-white transition-colors text-nordic-dark"
           aria-label="Save property"
@@ -37,7 +41,8 @@ export default function PropertyCard({ property }: { property: Property }) {
             <span className="material-icons text-sm text-mosque/80">bathtub</span> {property.baths}
           </div>
           <div className="flex items-center gap-1 text-nordic-muted text-xs">
-            <span className="material-icons text-sm text-mosque/80">square_foot</span> {property.area.toLocaleString()} m²
+            <span className="material-icons text-sm text-mosque/80">square_foot</span> {property.area.toLocaleString()}{' '}
+            m²
           </div>
         </div>
       </div>

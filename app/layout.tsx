@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Luxe Estate | Premium Real Estate",
-  description: "Find your sanctuary.",
+  title: 'Luxe Estate | Premium Real Estate',
+  description: 'Find your sanctuary.',
 };
 
 export default function RootLayout({
