@@ -1,4 +1,4 @@
-import type { Property } from '../lib/mockData';
+import type { Property } from '../../lib/mockData';
 
 export default function PropertyCard({ property }: { property: Property }) {
   const isForRent = property.tags.includes('FOR RENT');

@@ -1,4 +1,4 @@
-import type { Property } from '../lib/mockData';
+import type { Property } from '../../lib/mockData';
 
 export default function FeaturedPropertyCard({ property }: { property: Property }) {
   return (
