@@ -18,10 +18,18 @@ export default function Navbar() {
             <Link className="text-nordic-dark/70 hover:text-nordic-dark font-medium text-sm hover:border-b-2 hover:border-nordic-dark/20 px-1 py-1 transition-all" href="#">Saved Homes</Link>
           </div>
           <div className="flex items-center space-x-6">
-            <button className="text-nordic-dark hover:text-mosque dark:text-gray-400 dark:hover:text-white transition-colors">
+            <button
+              type="button"
+              aria-label="Search"
+              className="text-nordic-dark hover:text-mosque dark:text-gray-400 dark:hover:text-white transition-colors"
+            >
               <span className="material-icons">search</span>
             </button>
-            <button className="text-nordic-dark hover:text-mosque dark:text-gray-400 dark:hover:text-white transition-colors relative">
+            <button
+              type="button"
+              aria-label="View notifications"
+              className="text-nordic-dark hover:text-mosque dark:text-gray-400 dark:hover:text-white transition-colors relative"
+            >
               <span className="material-icons">notifications_none</span>
               <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full border-2 border-background-light dark:border-background-dark"></span>
             </button>
