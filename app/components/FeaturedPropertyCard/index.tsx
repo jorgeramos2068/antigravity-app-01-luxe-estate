@@ -1,10 +1,16 @@
 import type { Property } from '../../lib/mockData';
+import Image from 'next/image';
 
 export default function FeaturedPropertyCard({ property }: { property: Property }) {
   return (
     <div className="group relative rounded-xl overflow-hidden shadow-soft bg-white dark:bg-white/5 cursor-pointer">
       <div className="aspect-[4/3] w-full overflow-hidden relative">
-        <img alt={property.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src={property.image} />
+        <Image
+          alt={property.title}
+          src={property.image}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+        />
         {property.tags.length > 0 && (
           <div className="absolute top-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-nordic-dark dark:text-white">
             {property.tags[0]}
