@@ -11,7 +11,8 @@ export default async function Home({
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
   const { page: pageParam } = await searchParams;
-  const currentPage = Math.max(1, parseInt((pageParam as string) ?? '1', 10) || 1);
+  const normalizedPageParam = Array.isArray(pageParam) ? pageParam[0] : pageParam;
+  const currentPage = Math.max(1, parseInt(normalizedPageParam ?? '1', 10) || 1);
 
   const [featuredEstates, { data: estates, totalCount }] = await Promise.all([
     getFeaturedEstates(),
