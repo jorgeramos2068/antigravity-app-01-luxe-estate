@@ -26,7 +26,8 @@ export async function getFeaturedEstates(): Promise<Property[]> {
     .from('estates')
     .select('*')
     .eq('featured', true)
-    .order('created_at', { ascending: true });
+    .order('created_at', { ascending: true })
+    .limit(2);
 
   if (error) throw new Error(error.message);
   return (data ?? []).map(rowToProperty);
