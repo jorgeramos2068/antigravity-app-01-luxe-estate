@@ -15,7 +15,9 @@ function rowToProperty(row: Record<string, unknown>): Property {
     baths: Number(row.baths),
     area: Number(row.area),
     image: row.image as string,
-    tags: row.tags as string[],
+    tags: Array.isArray((row as { tags?: unknown }).tags)
+      ? ((row as { tags?: unknown[] }).tags as string[])
+      : [],
     featured: (row.featured as boolean) || false,
   };
 }
